@@ -1,3 +1,4 @@
+"use strict";
 function play() {
   let x = Math.random();
   x = Math.floor(x * 2 + 1);
