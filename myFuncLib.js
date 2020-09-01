@@ -54,7 +54,22 @@ function spinRoulette() {
 }
 
 // converts celsius temperatures to Fahrenheit
-function C2F(c) {}
+function C2F(c) {
+  let ctemp = c;
+  let convertF = (ctemp * 9) / 5 + 32;
+
+  let result = ctemp + " degrees celsius is " + convertF + " Fahrenheit";
+  console.log(result);
+}
+
+C2F(20);
 
 // Fahrenheit to Celsius
-function F2C(f) {}
+function F2C(f) {
+  let fTemp = f;
+  let convert = ((fTemp - 32) * 5) / 9;
+
+  let result = fTemp + " degrees fahrenheit is " + convert + " celsius";
+  console.log(result);
+}
+F2C(50);
