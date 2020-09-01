@@ -2,44 +2,69 @@
 
 
 // Dice / coin / roulette
-let gameItem; 
+
 
 // Dice 6 - coin 2 - Roulette 37
 let maxOutcomes;
+const gameItem = 1;
 
 function play(maxOutcomes) {
-  gameItem = 1;
 
-  let x = Math.round(Math.random(maxOutcomes));
+  let x = Math.floor(Math.random() * maxOutcomes + 1); // random nummer fra 1-6
   //gameItem = Math.floor(x * 2 + 1); // x = 2
-  
+
   return x;
 }
 
 
-let diceAmount = 2;
+
+//Antallet af terninger 1 som std.
+let diceAmount = 0;
 
 // Throw 1 dice & have 6 numbers of outcome
 function throwDice(){
 
-let maxOutcomes = 6; // terning
+// terning 
+let maxOutcomes = 6;
 
-  for(let i =0; i < diceAmount; i++){
-  
-    play(maxOutcomes);
-      
+  for(let i =0; i <= diceAmount; i++){
+    let result = play(maxOutcomes);
+    if(result > 0)
+    {
+      console.log("DiceRoll: " + result);
+    }
   }
-
 }
 
+
+let coinAmount = 0;
 // Flip one coin, with heads/tails
 function flipCoin(){
 
+ let maxOutcomes = 1;
+
+  for(let i = 0; i <= coinAmount; i++)
+  {
+    let result = play(maxOutcomes);
+  
+    console.log("Coinflip:" + result);
+
+  }
 }
 
 
+let rouletteSpin = 0;
 // Spin 1 roulette, with 37 numbers, 0 incl.
 function spinRoulette(){
+let maxOutcomes = 36;
+
+for(let i = 0; i <= rouletteSpin; i++)
+  {
+    let result = play(maxOutcomes);
+   
+    console.log("Roulette number:" + result);
+
+  }
 
 }
 
