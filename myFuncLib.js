@@ -52,3 +52,9 @@ function spinRoulette() {
     console.log("Roulette number:" + result);
   }
 }
+
+// converts celsius temperatures to Fahrenheit
+function C2F(c) {}
+
+// Fahrenheit to Celsius
+function F2C(f) {}
