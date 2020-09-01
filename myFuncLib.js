@@ -1,80 +1,54 @@
 "use strict";
 
+// Funktion der gør det muligt at beregne et random tal ud fra en min & max værdi.
+function play(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
 
-// Dice / coin / roulette
-
-
-// Dice 6 - coin 2 - Roulette 37
-let maxOutcomes;
-const gameItem = 1;
-
-function play(maxOutcomes) {
-
-  let x = Math.floor(Math.random() * maxOutcomes + 1); // random nummer fra 1-6
-  //gameItem = Math.floor(x * 2 + 1); // x = 2
-
+  let x = Math.floor(Math.random() * (max - min + 1) + min);
   return x;
 }
 
-
-
 //Antallet af terninger 1 som std.
-let diceAmount = 0;
+let dice = 0;
 
 // Throw 1 dice & have 6 numbers of outcome
-function throwDice(){
+function throwDice() {
+  // terning
+  let min = 1;
+  let max = 6;
 
-// terning 
-let maxOutcomes = 6;
-
-  for(let i =0; i <= diceAmount; i++){
-    let result = play(maxOutcomes);
-    if(result > 0)
-    {
+  for (let i = 0; i <= dice; i++) {
+    let result = play(min, max);
+    if (result > 0) {
       console.log("DiceRoll: " + result);
     }
   }
 }
 
+let coin = 0;
 
-let coinAmount = 0;
 // Flip one coin, with heads/tails
-function flipCoin(){
+function flipCoin() {
+  let min = 0;
+  let max = 1;
 
- let maxOutcomes = 1;
+  for (let i = 0; i <= coin; i++) {
+    let result = play(min, max);
 
-  for(let i = 0; i <= coinAmount; i++)
-  {
-    let result = play(maxOutcomes);
-  
-    console.log("Coinflip:" + result);
-
+    console.log("Coinflip: " + (result > 0 ? "Head" : "Tails"));
   }
 }
 
-
-let rouletteSpin = 0;
+let roulette = 0;
 // Spin 1 roulette, with 37 numbers, 0 incl.
-function spinRoulette(){
-let maxOutcomes = 36;
+function spinRoulette() {
+  let min = 0;
+  let max = 36;
 
-for(let i = 0; i <= rouletteSpin; i++)
-  {
-    let result = play(maxOutcomes);
-   
+  for (let i = 0; i <= roulette; i++) {
+    let result = play(min, max);
+
     console.log("Roulette number:" + result);
-
   }
-
 }
-
-
-
-/*
-
-console.log(play()); // the returned x value from play is printed
-// or
-var slag = play(); // the returned x value from play is assigned to slag
-console.log(slag);
-
-*/
