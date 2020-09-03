@@ -9,6 +9,16 @@ function play(min, max) {
   return x;
 }
 
+
+
+/*
+function play() {
+    let x = Math.random();
+    x = Math.floor(x * 2 + 1);
+    return x;
+}
+*/
+
 //Antallet af terninger 1 som std.
 let dice = 0;
 
@@ -36,7 +46,7 @@ function flipCoin() {
   for (let i = 0; i <= coin; i++) {
     let result = play(min, max);
 
-    console.log("Coinflip: " + (result > 0 ? "Head" : "Tails"));
+    console.log("Coinflip: " + (result > 0 ? "Heads" : "Tails"));
   }
 }
 
