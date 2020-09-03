@@ -44,7 +44,6 @@ function calcVat(a) {
 
   //100
   temp = a / vatCalc;
-  debugger;
   result = a - temp;
 
   vatField.innerHTML = result;
