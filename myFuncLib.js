@@ -10,23 +10,12 @@ function play(min, max) {
 }
 
 
-
-/*
-function play() {
-    let x = Math.random();
-    x = Math.floor(x * 2 + 1);
-    return x;
-}
-*/
-
-
-
 // Throw 1 dice & have 6 numbers of outcome
 function throwDice() {
+  
   // terning
   let min = 1;
   let max = 6;
-
 
     let result = play(min, max);
     if (result > 0) {
