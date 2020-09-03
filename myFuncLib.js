@@ -19,8 +19,7 @@ function play() {
 }
 */
 
-//Antallet af terninger 1 som std.
-let dice = 0;
+
 
 // Throw 1 dice & have 6 numbers of outcome
 function throwDice() {
@@ -28,39 +27,36 @@ function throwDice() {
   let min = 1;
   let max = 6;
 
-  for (let i = 0; i <= dice; i++) {
+
     let result = play(min, max);
     if (result > 0) {
       console.log("DiceRoll: " + result);
     }
-  }
 }
 
-let coin = 0;
 
 // Flip one coin, with heads/tails
 function flipCoin() {
   let min = 0;
   let max = 1;
 
-  for (let i = 0; i <= coin; i++) {
+
     let result = play(min, max);
 
     console.log("Coinflip: " + (result > 0 ? "Heads" : "Tails"));
-  }
+
 }
 
-let roulette = 0;
+
 // Spin 1 roulette, with 37 numbers, 0 incl.
 function spinRoulette() {
   let min = 0;
   let max = 36;
-
-  for (let i = 0; i <= roulette; i++) {
+ 
     let result = play(min, max);
 
     console.log("Roulette number:" + result);
-  }
+
 }
 
 // converts celsius temperatures to Fahrenheit
