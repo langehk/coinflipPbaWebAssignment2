@@ -9,8 +9,6 @@ let mySecondArray = [ prompt("Enter First number"),
                  ];
 
 
-
-
 /* Check if the array is palindromic
 
 First enter your array of 5 numbers.
@@ -19,7 +17,7 @@ Then it check if the array is palindormic.
 */
 function checkPalindromic(arr)
 {
-
+    arr = mySecondArray;
     let palindromic = true;
 
     for(let i = 0; i < arr.length / 2; i++)
@@ -36,13 +34,13 @@ function checkPalindromic(arr)
    
 }
 
-checkPalindromic(mySecondArray);
+
 
 // Check if the first and last element in the array are identical
 
 function checkFirstAndLastElement(arr){
 
-    
+    arr = mySecondArray;
     let isIdentical = false;
 
     let first =arr[0];
@@ -63,4 +61,4 @@ function checkFirstAndLastElement(arr){
 }
 
 
-checkFirstAndLastElement(mySecondArray);
+
