@@ -1,70 +1,35 @@
-let input1 = document.getElementById("input1");
+function checkPalindromic(s) {
+  let palindrome = true;
+  var removeChars = /[^A-Za-z0-9]/g; // Fjernet Chars som vi ikke vil have i strengen.
+  let str = document.getElementById("input1").value;
+  // Angiver de chars som vi ikke gider at have, og laver en tom streng i stedet.
+  // - Den bliver bare fjernet.
 
-//Laver vores input til lower case.
-//let lowerCaseString = input1.toLowerCase().replace(/[^a-zA-Z0-9]+/g,'');
-let count = 0;
+  //Konverteter den til lowerCase.
+  let convertedString = str.toLowerCase();
 
+  var strLength = convertedString.length;
 
-let palindrome = true;
-/*
-function isPalindrome(s){
-    
-    s = input1; // Henter vores værdi fra input.
-    
-    if(firstP(s))
-    {
-        palindrome = true;
-    }else if (lastP(s))
-    {
-        palindrome = true;
-    }
-}
-*/
+  for (let i = 0; i < strLength / 2; i++) {
+    if (convertedString[i] !== convertedString[strLength - 1 - i]) {
+      // Hvis index af stengen matcher kører loopet.
+      palindrome = false; // Hvis de ikke matcher, stopper den looper og returnerer false.
+      logResult(convertedString, palindrome);
+      return; // Stopper loop, hvis den bliver ramt.
+    } else palindrome = true;
 
-
-
-function checkPalindromicP(s)
-{
-    s = input1;
-    let palindromic = true;
-
-    for(let i = 0; i < s.length / 2; i++)
-    {
-
-        if(s[i] !== s[s.length - i - 1])
-        {
-          palindromic = false;
-        }
-        console.log("This is your string: [" + input1 + "] press F5 for a new one!");
-        console.log("The string is palindromic: " + palindromic);
-        return palindromic;
-    }
-   
+    logResult(convertedString, palindrome);
+  }
 }
 
+// brugt til at printe resultat ud med...
+function logResult(s, pali) {
+  str = s;
+  palindrome = pali;
 
-function firstP(s) {
-    s = input1;
-
-    console.log("This is the first char: " + s.charAt(0));
+  if (pali == true) {
+    console.log("The entered string: " + str + " is palindrome!");
+  } else if (pali == false) {
+    console.log("The entered string: " + str + " isn't palindrome!");
   }
-  
-  
-  function lastP(s) {
-    s = input1;
-    let lastCharInString = s[s.length - 1];
-  
-    console.log("This is the last char: " + lastCharInString);
-  }
-  
-  
-  // Skriver et bogstav ud hvis det er ulige antal, hvis ikke skriver den to tal.
-  function middleP(s) {
-    s = input1;
-  
-    let middleChar =
-      s.length % 2 ? s.substr(s.length / 2, 1) : s.substr(s.length / 2 - 1, 2);
-  
-    console.log( "This is the middle char: " + middleChar);
-  
-  }
+}
