@@ -1,6 +1,4 @@
 
-
-
 function first(s) {
   s = "JuperDupe20oolStrinS";
 

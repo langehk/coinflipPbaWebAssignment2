@@ -1,5 +1,5 @@
 
-const dice = [  1, 2, 3, 4 ,5, 6  ];
+const die = [  1, 2, 3, 4 ,5, 6  ];
 const coin = [ "heads", "tails "];
 
 // takes a variable as input, here we can use an array.

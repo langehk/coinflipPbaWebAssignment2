@@ -1,7 +1,6 @@
 'use strict'
 
 const die = [1, 2, 3, 4 ,5 ,6];
-
 /*
 function that rolls a die x amount of times
 
@@ -28,7 +27,6 @@ function superDie(arr, num, n)
         if(item == n){
             nAmount++;
         }
-
         rollHistory.push(item); 
     }
 

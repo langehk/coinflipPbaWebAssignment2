@@ -22,11 +22,11 @@ function checkPalindromic(arr)
 
     for(let i = 0; i < arr.length / 2; i++)
     {
-
         if(arr[i] !== arr[arr.length - i - 1])
         {
           palindromic = false;
         }
+
         console.log("This is your array: [" + mySecondArray + "] press F5 for a new one!");
         console.log("The array is palindromic: " + palindromic);
         return palindromic;
